@@ -11,8 +11,9 @@ import shlex
 import datetime
 import logging
 import os
-from os.path import basename
+from os.path import basename, join
 import math
+from os import getcwd
 import os.path
 import sys
 import time
@@ -26,8 +27,6 @@ from telethon import events
 from telethon.tl.functions.messages import GetPeerDialogsRequest
 from telethon.tl.functions.channels import GetParticipantRequest
 from telethon.tl.types import ChannelParticipantAdmin, ChannelParticipantCreator, DocumentAttributeFilename
-
-
 async def md5(fname: str) -> str:
     hash_md5 = hashlib.md5()
     with open(fname, "rb") as f:
