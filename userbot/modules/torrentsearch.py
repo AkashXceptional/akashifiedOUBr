@@ -33,7 +33,7 @@ async def gengkapak(e):
             break
 
     if not listdata:
-        return await e.edit("`Error: No results found`")
+        return await e.edit("`No hits, try searching with a different query`")
 
     tsfileloc = f"{TEMP_DOWNLOAD_DIRECTORY}/{query}.txt"
     with open(tsfileloc, "w+", encoding="utf8") as out_file:
