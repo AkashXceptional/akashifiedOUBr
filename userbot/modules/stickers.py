@@ -160,7 +160,7 @@ async def kang(args):
                         await conv.send_message("/publish")
                         if is_anim:
                             await conv.get_response()
-                            await conv.send_message(f"<{packnick}>")
+                            await conv.send_message(packnick)
                         # Ensure user doesn't get spamming notifications
                         await conv.get_response()
                         await bot.send_read_acknowledge(conv.chat_id)
